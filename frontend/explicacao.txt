@@ -1,0 +1,18 @@
+Conceitos sobre ReactJS
+
+
+Componente : é uma função que retorna html e pode ter funcionalidades JavaScript, css ...
+!!! Todos os componentes sempre com letras maisculas no começo se ñ não vai funcionar!
+
+JSX (JavaScript XML) : quando o html esta integrado dentro do JavaScript.
+
+Live reload : actualização automatica do servidor ...
+
+Propriedades : têm as mesmas sintaxes dos atributos passados no html porém elas são passados para 
+                os componentes.
+
+Estado : permite de actualizar uma informação e refletir as alterações na interface.
+
+useState -> retorna um Array = [valor, funcaoDeActualizao]
+
+AXIOS : client http responsavel por fazer a chamada da nossa API back-end e obter as respostas !
