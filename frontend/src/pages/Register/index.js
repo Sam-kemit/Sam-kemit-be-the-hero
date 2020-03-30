@@ -31,10 +31,10 @@ export default function Register() {
        try {
             const response = await api.post('ongs', data);
 
-            alert(`Seu ID de acesso: ${response.data.id}`);
+            alert(`Your access ID: ${response.data.id}`);
             history.push('/');
        } catch (err) {
-            alert('Erro no cadastro, tente novamente.');  
+            alert('Mistake in the record, try again.');  
        }
 
     }
@@ -46,18 +46,18 @@ export default function Register() {
                 <section>
                     <img src={logoImg} alt="Be The Hero"/>
 
-                    <h1>Cadastro</h1>
-                    <p>Faça seu cadastro, entre na plateforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
+                    <h1>Registration</h1>
+                    <p>Register, enter the plateforma and help people to find the cases of your NGO.</p>
 
                     <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="#E02041" />
-                        Não tenho cadastro
+                        Don't have an account
                     </Link>
                 </section>
 
                 <form onSubmit={handleRegister}>
                     <input 
-                        placeholder="Nome da ONG"
+                        placeholder="Name of NGO"
                         value={name}
                         onChange={e => setName(e.target.value)}
                     />
@@ -74,19 +74,19 @@ export default function Register() {
 
                     <div className="input-group">
                         <input 
-                            placeholder="Cidade"
+                            placeholder="City"
                             value={city}
                             onChange={e => setCity(e.target.value)}    
                         />
                         <input 
-                            placeholder="UF" 
-                            style={{ width: 80}} 
+                            placeholder="Code" 
+                            style={{ width: 120}} 
                             value={uf}
                             onChange={e => setUf(e.target.value)}
                         />
                     </div>
                     
-                    <button className="button" type="submit">Cadastrar</button>
+                    <button className="button" type="submit">Register</button>
 
                 </form>
             </div>

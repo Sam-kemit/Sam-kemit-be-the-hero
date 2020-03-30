@@ -36,7 +36,7 @@ export default function Profile() {
 
             setIncidents(incidents.filter(incident => incident.id !=id));
         } catch (err) {
-            alert('Erro ao deletar caso, tente novamente.');
+            alert('Error when deleting case, try again.');
         }
     }   
 
@@ -50,27 +50,27 @@ export default function Profile() {
        <div className="profile-container">
         <header>
             <img src={logoImg} alt="Be The Hero"/>
-                <span>Bem vinda, {ongName}</span>
+                <span>Welcome, {ongName}</span>
 
-                <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
+                <Link className="button" to="/incidents/new">Register new case</Link>
                 <button onClick={handleLogout} type="button">
                     <FiPower size={18} color="#E02041" />
                 </button>
         </header>
 
-        <h1>Casos cadastrados</h1>
+        <h1>Registered cases</h1>
 
         <ul>
             {incidents.map(incident => (
                 <li key={incident.id}>
-                    <strong>CASO:</strong>
+                    <strong>CASE:</strong>
                     <p>{incident.title}</p>
 
-                    <strong>DESCRICÃO:</strong>
+                    <strong>DESCRIPTION:</strong>
                     <p>{incident.description}</p>
 
-                    <strong>VALOR:</strong>
-                    <p>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'})
+                    <strong>VALUE:</strong>
+                    <p>{Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'})
                         .format(incident.value)}</p>
 
                     <button onClick={() => handleDeleteIncident(incident.id)} type="button">

@@ -18,14 +18,14 @@ export default function Logon() {
         e.preventDefault();
 
         try {
-            const response = await api.post('sessions', { id }); // ce n'estpas recommandé d'envoyer le ID dans url
+            const response = await api.post('sessions', { id }); // ce n'est pas recommandé d'envoyer le ID dans url
             
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongName', response.data.name);
 
             history.push('/profile');
         } catch (err) {
-            alert('Falha no login, tente novamente.');
+            alert('Login failure, try again.');
         }
     }
 
@@ -35,19 +35,19 @@ export default function Logon() {
                 <img src={logoImg} alt="Be The Hero"/>
 
                 <form onSubmit={handleLogin}>
-                    <h1>Faça seu logon</h1>
+                    <h1>Sign in</h1>
 
                     <input 
-                        placeholder="Sua ID" 
+                        placeholder="Your ID" 
                         value={id}
                         onChange={e => setId(e.target.value)}
                     />
 
-                    <button className="button" type="submit">Entrar</button>
+                    <button className="button" type="submit">Log in</button>
 
                     <Link className="back-link" to="/register">
                         <FiLogIn size={16} color="#E02041" />
-                        Não tenho cadastro
+                        Don't have an account
                     </Link>
                 </form>
             </section>

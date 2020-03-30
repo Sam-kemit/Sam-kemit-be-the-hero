@@ -37,7 +37,7 @@ export default function NewIncident() {
             history.push('/profile');
 
         } catch (err) {
-            alert('Erro ao cadastrar caso, tente novamente.')
+            alert('Error when registering case, try again.')
         }
     }
 
@@ -48,33 +48,33 @@ export default function NewIncident() {
                 <section>
                     <img src={logoImg} alt="Be The Hero"/>
 
-                    <h1>Cadastro novo caso</h1>
-                    <p>Descreva o caso detalhadamente para encontrar um heroi para resolver isso.</p>
+                    <h1>New case registration</h1>
+                    <p>Describe the case in detail to find a hero to solve it.</p>
 
                     <Link className="back-link" to="/profile">
                         <FiArrowLeft size={16} color="#E02041" />
-                        Voltar para home
+                        Back to home
                     </Link>
                 </section>
 
                 <form onSubmit={handleNewIncident}>
                     <input 
-                        placeholder="Titulo do caso" 
+                        placeholder="Case Title" 
                         value={title}
                         onChange={e => setTitle(e.target.value)}
                     />
                     <textarea 
-                        placeholder="Descrição" 
+                        placeholder="Description" 
                         value={description}
                         onChange={e => setDescription(e.target.value)}
                     />
                     <input 
-                        placeholder="Valor em reais" 
+                        placeholder="Value in dollars" 
                         value={value}
                         onChange={e => setValue(e.target.value)}
                     />
                     
-                    <button className="button" type="submit">Cadastrar</button>
+                    <button className="button" type="submit">Register</button>
 
                 </form>
             </div>
