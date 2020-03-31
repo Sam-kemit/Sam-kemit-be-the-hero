@@ -6,7 +6,7 @@
 ---
 
 # About this project
-This project was developed during the Omnistack week edition 11 organized by Rockectseat. In fact, it's a week during which the organizer proposes a full satck javascript project (nodejs, reactjs and react native) and we realize it together with him. 
+This project was developed during the Omnistack week edition 11 organized by Rockectseat. In fact, it's a week during which the organizer proposes a full stack javascript project (nodejs, reactjs and react native) and we realize it together with him. 
 
 Be the hero is an application that allows NGOs to find potential financial partners in case of major need to solve its problems.
 
