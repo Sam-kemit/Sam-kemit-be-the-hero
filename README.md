@@ -18,8 +18,8 @@ Also, you can use this project as you wish, be for study, be for make improvemen
 It's free!
 
 # Functionalities
-- NGO can : Register, Login, Register new cases & Delete cases.
-- The Hero can : List all cases & Get in touch with NGO.
+1. NGO can : Register, Login, Register new cases & Delete cases.
+2. The Hero can : List all cases & Get in touch with NGO.
   
 
 # Key technologies
