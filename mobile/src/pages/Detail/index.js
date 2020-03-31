@@ -14,7 +14,7 @@ export default function Detail() {
     const route = useRoute();
 
     const incident = route.params.incident;
-    const message = `Ola ${incident.name}, estou entrando em contacto pois gostaria de ajudar no caso "${incident.title}" com o valor de ${Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(incident.value)}`; 
+    const message = `Hi ${incident.name}, I'm getting in touch because I'd like to help with the case "${incident.title}" with a value of ${Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(incident.value)}`; 
 
     function navigateBack() {
         navigation.goBack();
@@ -44,12 +44,12 @@ export default function Detail() {
 
             <View style={styles.incident} >
                 <Text style={[styles.incidentProperty, {marginTop: 0}]}>ONG:</Text>
-                <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
+                <Text style={styles.incidentValue}>{incident.name} of {incident.city}/{incident.uf}</Text>
 
-                <Text style={styles.incidentProperty}>CASO:</Text>
+                <Text style={styles.incidentProperty}>CASE:</Text>
                 <Text style={styles.incidentValue}>{incident.title}</Text>
 
-                <Text style={styles.incidentProperty}>VALOR:</Text>
+                <Text style={styles.incidentProperty}>VALUE:</Text>
                 <Text style={styles.incidentValue}>
                     {Intl.NumberFormat('pt-BR', {
                         style: 'currency', 
@@ -59,10 +59,10 @@ export default function Detail() {
             </View>
 
             <View style={styles.contactBox} >
-                <Text style={styles.heroTitle}>Salve o dia!</Text>
-                <Text style={styles.heroTitle}>Seja o heroi desse caso.</Text>
+                <Text style={styles.heroTitle}>Save the day!</Text>
+                <Text style={styles.heroTitle}>Be the hero of this case.</Text>
 
-                <Text style={styles.heroDescription}>Entre em contacto:</Text>
+                <Text style={styles.heroDescription}>Get in touch:</Text>
 
                 <View style={styles.actions}>
                     <TouchableOpacity style={styles.action} onPress={sendWhatsapp}>
