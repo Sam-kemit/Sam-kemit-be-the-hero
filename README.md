@@ -47,4 +47,5 @@ It's free!
 - `$ npm install` install all React Native packages.
 - `$ npm start` runs the app in the development for Expo.
 
+<hr>
 Created by Samuel K 🖤💯
